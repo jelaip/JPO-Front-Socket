@@ -12,10 +12,13 @@ socket.on('disconnect', () => {
     console.log('Disconnected');
 });
 
-let buttons = document.getElementsByClassName('button');
+//get all buttons
+const buttons = document.querySelectorAll('button');
+console.log(buttons);
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        console.log(button.id);
         socket.emit('msg', button.id);
     });
 })

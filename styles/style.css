@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.container-colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-colors div {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.container-colors div button {
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+.container-animations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-animations button {
+    margin: 0 10px;
+}

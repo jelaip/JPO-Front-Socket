@@ -5,69 +5,227 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    height: 100vh;
-}
-
-main {
-    padding-top: 50px;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(-45deg, #54216c, #401f5b, #241b3f, #34256c);
+    font-family: 'Open Sans';
 }
 
 .container {
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    height: 100vh;
+    width: 100%;
 }
 
-h1, h2 {
-    margin: auto;
+h2 {
+    color: #fbfbfb;
     text-align: center;
-    justify-content: center;
+    font-size: 2.5rem;
 }
 
-.container-colors, .container-animations {
+.display {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    margin: 20px auto 0px;
+    width: 350px;
+    height: 350px;
 }
 
-.container-colors div {
-    margin: 0 10px;
+.display .color_shade {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-colors div button {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    border: none;
-    border-radius: 10px;
+.display .color_shade .color_gradient {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-colors div button:hover {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
+.display .color_shade .color_gradient .color_active {
+    display: flex;
+    margin: auto;
+    width: 65%;
+    height: 65%;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.container-animations button {
-    margin: 0 10px;
-    border: none;
+.display .smiley {
+    width: 163.8px;
+    height: 163.8px;
+    border-radius: 100%;
+    position: absolute;
+    display: flex;
+    margin: auto;
+}
+
+.display .smiley .left_eye,
+.display .smiley .right_eye
+{
     background: black;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50px;
+    animation: blink 1.5s infinite;
 }
 
-.container-animations button:hover {
-    color: black;
+.display .smiley .left_eye {
+    left: 35px;
+}
+
+.display .smiley .right_eye {
+    right: 35px;
+}
+
+button {
+    border: none;
+    color: white;
+}
+
+.colors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.colors .color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+}
+
+.colors .color.active {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.colors button {
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.animations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.animations button {
+    background: linear-gradient(#c644fc, #992afb);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.execute {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.execute button {
+    background: linear-gradient(#c644fc, #992afb);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+#red {
+    background: red;
+}
+
+#orange {
+    background: orange;
+}
+
+#yellow {
+    background: yellow;
+}
+
+#green {
+    background: green;
+}
+
+#cyan {
+    background: cyan;
+}
+
+#magenta {
+    background: magenta;
+}
+
+#white {
     background: white;
-    transition: 0.5s;
+}
+
+@keyframes blink {
+    0% {
+        height: 20px;
+    }
+    40% {
+        height: 0;
+        margin-top: 20px;
+    }
+    100% {
+        height: 20px;
+        margin-top: 0;
+    }
+}
+
+@keyframes switch {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.switch_animation {
+    animation: switch 2s infinite;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+        height: 0%;
+    }
+    100% {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+.load_animation {
+    animation: load 2s infinite alternate;
 }

@@ -1,67 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JPO-Front-Socket</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-</head>
-<body>
-    <main>
-        <h1>JPO-Front-Socket</h1>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+        <!-- TITLE -->
+        <title>Home |</title>
+
+        <!-- LOGO -->
+        <link rel="icon" type="image/x-icon" href="../IMG/" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+        <!-- FONT -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open Sans"
+            rel="stylesheet"
+        />
+    </head>
+
+    <!-- MAIN PAGE -->
+    <body>
         <div class="container">
-            <h2>Choose Colors</h2>
+            <h2>Choisissez Votre Design</h2>
 
-            <div class="container-colors">
-                <div class="container-color" >
-                    <button class="color-button" style="background-color: green;" id="green"></button>
-                    <p class="color-text">Green</p>
+            <div class="display">
+                <div class="color_shade">
+                    <div class="color_gradient"></div>
                 </div>
-                <div class="container-color" >
-                    <button class="color-button" style="background-color: red;"id="red"></button>
-                    <p class="color-text">Red</p>
-                </div>
-                <div class="container-color" >
-                    <button class="color-button" style="background-color: yellow;" id="yellow"></button>
-                    <p class="color-text">Yellow</p>
-                </div>
-                <div class="container-color" ">
-                    <button class="color-button" style="background-color: white; border: 1px solid #ccc;" id="white"></button>
-                    <p class="color-text">White</p>
-                </div>
-                <div class="container-color" >
-                    <button class="color-button" style="background-color: cyan;" id="cyan"></button>
-                    <p class="color-text">Cyan</p>
-                </div>
-                <div class="container-color">
-                    <button class="color-button" style="background-color: magenta;" id="mangenta"></button>
-                    <p class="color-text">Mangenta</p>
-                </div>
-                <div class="container-color" >
-                    <button class="color-button" style="background-color: orange;" id="orange"></button>
-                    <p class="color-text">Orange</p>
+
+                <div class="smiley">
+                    <div class="left_eye"></div>
+                    <div class="right_eye"></div>
                 </div>
             </div>
-        </div>
-        
-        <div class="container">
-            <h2>Choose Animations</h2>
 
-            <div class="container-animations">
-                <button class="container-animation" id="fill">
-                    <p class="animation-title">Fill</p>
-                </button>
-                <button class="container-animation" id="switch">
-                    <p class="animation-title">Switch</p>
-                </button>
-                <button class="container-animation" id="load">
-                    <p class="animation-title">Load</p>
-                </button>
+            <div class="choices">
+                <div class="colors">
+                    <div class="color"><button class="color-button" id="red"></button></div>
+                    <div class="color"><button class="color-button" id="orange"></button></div>
+                    <div class="color"><button class="color-button" id="yellow"></button></div>
+                    <div class="color"><button class="color-button" id="green"></button></div>
+                    <div class="color"><button class="color-button" id="cyan"></button></div>
+                    <div class="color"><button class="color-button" id="magenta"></button></div>
+                    <div class="color"><button class="color-button" id="white"></button></div>
+                </div>
+
+                <div class="animations">
+                    <div class="animation fill"><button class="animation-button" id="fill">Fill</button></div>
+                    <div class="animation switch"><button class="animation-button" id="switch">Switch</button></div>
+                    <div class="animation load"><button class="animation-button" id="load">Load</button></div>
+                </div>
             </div>
+
+            <div class="execute"><button class="execute">Execute</button></div>
         </div>
-    </main>
-    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-</body>
+
+        <!-- JAVASCRIPT -->
+        <script
+            src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+            integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../JS/script.js"></script>
+    </body>
 </html>
